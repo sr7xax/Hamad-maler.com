@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamad Maler&ndash; und Verputzarbeiten</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: gray;
+            color: darkblue;
+            padding: 20px 0 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            color: blue;
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+        }
+
+        .subheading {
+            color: blue;
+            font-size: 24px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .orange-line {
+            background-color: orange;
+            height: 20px;
+            width: 40%;
+            border: 2px solid black;
+            margin: 10px auto 0 auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100px;
+            z-index: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        .orange-line span {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            margin-top: 40px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            color: orange;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        section h2 {
+            font-size: 32px;
+        }
+
+        section p {
+            font-size: 20px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 20px;
+        }
+
+        /* Stil für das Willkommenszitat in der unteren Hälfte */
+        .welcome-quote {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 40%; /* Etwas kleinere Höhe als vorher */
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            flex-direction: column;
+            padding: 10px; /* Etwas mehr Innenabstand */
+        }
+
+        .welcome-quote h2 {
+            font-size: 24px; /* Kleinere Schriftgröße für die Überschrift */
+            margin-bottom: 10px;
+        }
+
+        .welcome-quote p {
+            font-size: 18px; /* Kleinere Schriftgröße für den Text */
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .welcome-quote button {
+            font-size: 18px; /* Kleinere Schriftgröße für die Buttons */
+            background-color: transparent;
+            border: 2px solid blue;
+            color: blue;
+            padding: 8px 16px; /* Etwas kleinere Buttons */
+            cursor: pointer;
+            margin: 0 5px; /* Geringerer Abstand zwischen den Buttons */
+        }
+
+        .welcome-quote a {
+            color: white;
+            text-decoration: underline;
+            font-size: 16px; /* Kleinere Schriftgröße für den Link */
+            margin-top: 10px;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .contact-info, .opening-hours {
+            margin-bottom: 20px;
+        }
+
+        .opening-hours h3 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+
+        .opening-hours p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Willkommenszitat -->
+    <div class="welcome-quote" id="welcomeMessage">
+        <h2>Willkommen bei Hamad Maler&ndash; und Verputzarbeiten</h2>
+        <p>Diese Webseite nutzt Cookies oder Drittanbieterdienste nur mit Ihrem Einverständnis - jederzeit widerruflich und freiwillig!</p>
+        <div>
+            <!-- Akzeptieren und Ablehnen Buttons -->
+            <button onclick="acceptCookies()">Alle Akzeptieren</button>
+            <button onclick="rejectCookies()">Ablehnen</button>
+        </div>
+        <br>
+        <!-- Datenschutzlink -->
+        <a href="datenschutz.html" target="_blank">Datenschutz</a>
+    </div>
+    
+    <header>
+        <div class="subheading">Maler&ndash; und Verputzarbeiten</div>
+        <h1>Hamad</h1>
+        <div class="orange-line">
+            <span>1000</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">&Uuml;ber uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Willkommen bei Hamad Maler&ndash; und Verputzarbeiten</h2>
+            <p>Wir freuen uns, Sie auf unserer Webseite begrü&szlig;en zu dürfen. Bei Hamad Malerei sind wir stolz darauf, Ihnen hochwertige Maler&ndash; und Verputzarbeiten anzubieten, die Ihre R&auml;ume in wahre Kunstwerke verwandeln.</p>
+            <p>Mit jahrelanger Erfahrung und einem Team aus erfahrenen Fachleuten stehen wir Ihnen bei all Ihren Malerbed&uuml;rfnissen zur Seite. Unser Ziel ist es, Ihre Vision zu verwirklichen und Ihnen ein Ergebnis zu liefern, das Ihre Erwartungen &uuml;bertrifft.</p>
+            <p>Von Innen&ndash; und Außensanierungen bis hin zu dekorativen Techniken und Verputzarbeiten bieten wir eine breite Palette an Dienstleistungen an, um jeden Ihrer W&uuml;nsche zu erf&uuml;llen. Unsere Experten verwenden nur die besten Materialien und modernste Techniken, um sicherzustellen, dass jedes Projekt langlebig und &auml;sthetisch ansprechend ist.</p>
+            <p>Entdecken Sie unsere Dienstleistungen und erfahren Sie mehr &uuml;ber unser Engagement f&uuml;r Qualit&auml;t und Kundenzufriedenheit. Kontaktieren Sie uns noch heute, um ein unverbindliches Angebot zu erhalten.</p>
+        </section>
+        <section id="services">
+            <h2>Unsere Services</h2>
+            <p>Bei Hamad Malerei bieten wir eine breite Palette von Maler&ndash; und Verputzarbeiten an, um all Ihren Anforderungen gerecht zu werden. Unser Ziel ist es, Ihnen qualitativ hochwertige Dienstleistungen zu bieten, die Ihre Erwartungen &uuml;bertreffen.</p>
+            
+            <h3>Innenanstriche</h3>
+            <p>Wir gestalten Ihre Innenr&auml;ume nach Ihren W&uuml;nschen und Bed&uuml;rfnissen. Ob Wohn&ndash; oder Gesch&auml;ftsbereich, wir sorgen f&uuml;r ein perfektes Finish und eine angenehme Atmosph&auml;re.</p>
+
+            <h3>Au&szlig;enanstriche</h3>
+            <p>Unsere Au&szlig;enanstriche sch&uuml;tzen Ihre Fassade und verleihen Ihrem Geb&auml;ude ein ansprechendes &auml;u&szlig;eres Erscheinungsbild.</p>
+
+            <h3>Verputzarbeiten</h3>
+            <p>Wir bieten professionelle Verputzarbeiten f&uuml;r Innen&ndash; und Au&szlig;enbereiche, um Ihre W&auml;nde und Fassaden zu versch&ouml;nern und zu sch&uuml;tzen.</p>
+
+            <h3>Asbestentsorgung</h3>
+            <p>Unsere Asbestentsorgung bietet sichere und professionelle L&ouml;sungen f&uuml;r die Entfernung von Asbest aus Ihrem Zuhause oder Gesch&auml;ft.</p>
+
+            <h3>Lackieren und Lasur</h3>
+            <p>Wir bieten hochwertige Lackier&ndash; und Lasurarbeiten an, um Ihre Oberfl&auml;chen zu sch&uuml;tzen und zu versch&ouml;nern.</p>
+
+            <h3>Beratung</h3>
+            <p>Wir stehen Ihnen mit fachkundiger Beratung zur Seite, um sicherzustellen, dass Ihre Projekte reibungslos und effizient ablaufen.</p>
+        </section>
+        <section id="about">
+            <h2>&Uuml;ber uns</h2>
+            <p>Hamad Malerei ist Ihr zuverl&auml;ssiger Partner f&uuml;r professionelle Maler&ndash; und Verputzarbeiten. Mit jahrelanger Erfahrung und einem engagierten Team aus Fachleuten setzen wir uns daf&uuml;r ein, jedem Projekt eine pers&ouml;nliche Note zu verleihen und die W&uuml;nsche unserer Kunden zu erf&uuml;llen.</p>
+            <p>Wir sind stolz auf unsere professionelle Arbeitsweise und unser Engagement f&uuml;r Qualit&auml;t. Jedes Projekt, das wir annehmen, wird mit gro&szlig;er Sorgfalt und Liebe zum Detail ausgef&uuml;hrt. Von der Beratung und Planung bis zur Umsetzung stehen wir Ihnen zur Seite und sorgen daf&uuml;r, dass Ihre Vision Wirklichkeit wird.</p>
+            <p>Unser Team besteht aus erfahrenen Malern und Verputzern, die ihr Handwerk verstehen und mit Leidenschaft bei der Sache sind. Wir verwenden nur die besten Materialien und modernste Techniken, um sicherzustellen, dass jedes Projekt langlebig und &auml;sthetisch ansprechend ist. Unser Ziel ist es, einen reibungslosen und stressfreien Prozess zu gew&auml;hrleisten.</p>
+            <p>Wir freuen uns darauf, mit Ihnen zusammenzuarbeiten und Ihre R&auml;ume in wahre Meisterwerke zu verwandeln.</p>
+        </section>
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>Kontaktiere uns f&uuml;r ein Angebot.</p>
+                    <p>Handy: +49 1703525744</p>
+                    <p>Telefon: 0881/1000</p>
+                    <p>E&ndash;Mail: maler.hamad@gmail.com</p>
+                </div>
+                <div class="opening-hours">
+                    <h3>&Ouml;ffnungszeiten</h3>
+                    <p>MO - SA</p>
+                    <p>08:00 - 12:00</p>
+                    <p>13:00 - 17:00</p>
+                    <p>SONNTAG:</p>
+                    <p>geschlossen</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.8316155705426!2d11.146924815394755!3d47.839358479198885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479d87e9a5b0d2b3%3A0x541ed9af040fda00!2sKirchmayrstra%C3%9Fe%2017%2C%2082362%20Weilheim%20in%20Oberbayern%2C%20Germany!5e0!3m2!1sen!2sde!4v1689073322636!5m2!1sen!2sde" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Hamad Maler&ndash; und Verputzarbeiten. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+        // Funktion zum Schließen des Willkommenszitats und Speichern der Zustimmung
+        function acceptCookies() {
+            document.querySelector('.welcome-quote').style.display = 'none';
+            // Hier könnte ein Cookie gesetzt werden, um die Zustimmung zu speichern
+        }
+
+        // Funktion zum Ablehnen und Schließen des Willkommenszitats
+        function rejectCookies() {
+            document.querySelector('.welcome-quote').style.display = 'none';
+            // Hier könnte ein Cookie gesetzt werden, um die Ablehnung zu speichern
+        }
+    </script>
+</body>
+</html>
+
+
